@@ -46,12 +46,16 @@ var otherBand = {
             }
     ]
 
-}];
-//console.log(bands);
-//bands[1].yearsPerformed = 20;
-var newSongs = ["falling away from me", "coming undone"];
-otherBand.namesOfSongs.concat(newSongs);
-var moreNamesOfSongs = bands[1].namesOfSongs.push(newSongs);
-//console.log(bands);
-console.log(bands[1].namesOfSongs);
-//console.log(bands[0].namesOfSongs);
+};
+otherBand.namesOfSongs.push("coming undone","falling away from me");
+//console.log(otherBand.namesOfSongs);
+otherBand.yearsPerforming=20;
+//console.log(otherBand);
+bands.hotelsCrashed=142;
+bands.bandMembers[1].kids.push( {
+    name: "jon",
+    age: 15
+    });
+//console.log(bands.bandMembers[1]);
+console.log(bands);
+console.log(otherBand);

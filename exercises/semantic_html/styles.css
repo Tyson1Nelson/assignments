@@ -1,0 +1,41 @@
+body {
+    background-image:url("http://media3.s-nbcnews.com/j/newscms/2016_32/1665641/ss-160812-twip-02_3380f5e9d30b766138155f8c3f11f9a8.nbcnews-fp-1200-800.jpg");
+    background-position: center;
+}
+p {
+    background-position: center;
+}
+header {
+    display: block;
+    text-align: center;
+    border: 2px solid white;
+}
+.homeBar, .contactBar, .aboutBar {
+    display:  inline;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+}
+.contactBar {
+    border: transparent;
+    border-right-width: 10%;
+    border-left-width: 10%;
+}
+h1 {
+    font-size: 75px;
+    color: aqua;
+    vertical-align: bottom;
+}
+body {
+    background-color: dimgray
+}
+h1: hover {
+    color: aliceblue;
+}
+main img {
+    margin-left:;
+    height: 200px;
+    float: none;
+    image-orientation: center;
+    
+}
