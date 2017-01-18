@@ -1,0 +1,40 @@
+
+main {
+    position:relative;
+}
+body {
+    background-color: azure;
+}
+#main {
+    position: relative;
+    width: 100%;
+    
+}
+#blog1, #blog2, #blog3, #blog4, #blog5, #blog6 {
+    color:dodgerblue;
+    background-color: aquamarine;
+    border: 1px solid blue;
+    position:relative;
+    width: 400px;
+    height: 200px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 30px;
+} 
+#blog1 {
+    margin-top: 80px;
+}
+#navBar {
+    position:fixed;
+    z-index: 10;
+    top: 0px;
+    height: 60px;
+    width: 100%;
+    background-color:gainsboro;
+    border: 1px solid black;
+    display: block;
+}
+img {
+    float: left;
+}

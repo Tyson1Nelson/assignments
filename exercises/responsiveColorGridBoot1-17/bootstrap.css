@@ -1,0 +1,32 @@
+.container {
+    width: 90%;
+}
+#col1{
+    background-color: #F5C6D6;
+    border: 5px solid white;
+    height: 75px;
+}
+#col2 {
+    background-color: #EE2E84;
+    border: 5px solid white;
+     height: 75px;
+}
+#colblue {
+    background-color: #85CFD8;
+    border: 5px solid white;
+     height: 75px;
+}
+#colgreen {
+    background-color: #8DC63F;
+    border: 5px solid white;
+    height: 75px;
+}
+#colorange {
+    background-color: #E76E34;
+    border: 5px solid white;
+     height: 75px;
+
+}
+/*.row1, .row2, .row3, .row4 {
+    height: 75px;
+}*/

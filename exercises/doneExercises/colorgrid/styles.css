@@ -27,3 +27,15 @@
     background-color: #E76E34;
     width: 25%;
 }
+@media (max-width: 786px) {
+    .box {
+        border-width: 1px;
+        display: block;
+        width: 100%;
+    }
+}
+@media (max-width: 450px) {
+    .box {
+        height: 75px;
+    }
+}

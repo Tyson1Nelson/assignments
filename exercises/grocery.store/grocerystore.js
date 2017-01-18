@@ -12,7 +12,8 @@ var shopper = {
         {
             itemnName: "cheese",
             type: "swiss",
-            catagory: "dairy"
+            catagory: "dairy",
+            price: 6.30
         }
     ],
     totalPrice: function() {
@@ -20,7 +21,7 @@ var shopper = {
         for (var i = 0; i < this.itemsInCart.length; i++){
             totalPrice = totalPrice + this.itemsInCart[i].price;
         }
-        console.log(this.groceryStoreName);
+        console.log(this.itemsInCart);
     }
 }
 
