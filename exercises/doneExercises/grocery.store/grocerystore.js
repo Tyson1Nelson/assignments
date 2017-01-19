@@ -23,6 +23,6 @@ var shopper = {
         }
         console.log(this.itemsInCart);
     }
-}
-
-shopper.totalPrice();
+};
+shopper.Cart. = ("apples", "oranges", "banana's");
+console.log(shopper);

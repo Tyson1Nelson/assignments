@@ -1,0 +1,31 @@
+img {
+    float: right;
+    border-style: outset;
+    border-width: 8px;
+    margin-top: 45px;
+    margin-right: 10px;
+}
+h1 {
+    text-align: center;
+    font-size: 45px;
+    font-family: Cinzel Decorative;
+}
+#myForm {
+    border: 5px solid black;
+    padding: 15px;
+}
+#p1 {
+    display: block;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 16px;
+}
+p {
+    margin-top: 30px;
+}
+body {
+    background-image:url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSfNp0K0DJzkT_SXkEi3DKeTdqAVyaDUSGi1zF_m2AU4vHuXrHK")
+    background-size: contain;
+    background-repeat: no-repeat;
+}

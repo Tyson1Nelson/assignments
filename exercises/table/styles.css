@@ -1,0 +1,14 @@
+table {
+    border-color: aqua;
+    height: 200px;
+    width: 400px;
+    text-align: center;
+    font-size: 18px;
+}
+thead {
+    background-color: aquamarine;
+    font-size: 20px;
+}
+#row2 {
+    background-color: azure;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Form</title>
+    <link href='//fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Ty's Travel</h1>
+    <img src="https://www.scienceabc.com/wp-content/uploads/2015/10/airplane.jpg" width="55%">
+    <p id="p1">Please insert your information below:</p>
+    <form action="info-form" id="myForm">
+        <input type="text" placeholder="First Name:" name="firstName">
+        <br>
+        <input type="text" placeholder="Last Name:" name="lastName">
+        <br>
+        <input type="number" placeholder="age" name="age">
+        <br>
+        <br>
+        <label for="gender">Gender:</label>
+        <br>
+        <input type="radio" name="gender" value="male">
+        <label for="male" name="gender"> Male:</label>
+        <br>
+        <input type="radio" name="gender" value="female">
+        <label for="female" name="gender"> Female:</label>
+        <p>where are you traveling to:</p>
+        <label for="location">Location</label>
+        <select name="states" id="state">
+            <option value="Utah" >Utah</option>
+            <option value="Idaho">Idaho</option>
+            <option value="Montana">Montana</option>
+        </select>
+        <br>
+        <p>What is your dietary restrictions, if any:</p>
+        <br>
+<!--        <label for="diet"></label>-->
+        <input type="checkbox" name="diet" id="check1" value="Vegitarian"> Vegatarian
+        <br>
+        <input type="checkbox" name="diet" id="check2" value="Kosher"> Kosher
+        <br>
+        <input type="checkbox" name="diet" id="check3" value="Lactose Free"> Lactose Free
+        <br>
+        <input type="checkbox" name="diet" id="check4" value="Vegan"> Vegan
+        <br>
+        <br>
+        <button type="button" id="submitButton">Submit</button>
+    </form>
+    <script src="main.js"></script>
+</body>
+
+</html>

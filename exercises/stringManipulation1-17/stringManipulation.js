@@ -1,6 +1,6 @@
 var readline = require("readline-sync");
 
-/*var name = readline.question("What is your name? ");
+var name = readline.question("What is your name? ");
 
 console.log("Hi " + name.toUpperCase());
 
@@ -14,7 +14,7 @@ var favColor = readline.question("what is your favorite color? ");
 console.log(favColor + " has " + favColor.length + " letters in it!");
 
 var joinedColorAnimal = animal.concat(favColor) 
-console.log("your animal is " + joinedColorAnimal)*/
+console.log("your animal is " + joinedColorAnimal)
 
 var longString = readline.question("please write a little something about yourself, please use more than 20 letters: ");
 var startFromN = readline.question("your string has " + (longString.length) + " characters in it. where would you like to start? 1 to " + (longString.length) + " ")
