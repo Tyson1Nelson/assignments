@@ -4,11 +4,13 @@ table {
     width: 400px;
     text-align: center;
     font-size: 18px;
+    margin-top: 30px;
+    margin-left: 15%;
 }
 thead {
     background-color: aquamarine;
     font-size: 20px;
 }
-#row2 {
+#row2, #row4 {
     background-color: azure;
 }

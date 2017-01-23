@@ -1,25 +1,33 @@
 body {
-    background-image:url("http://media3.s-nbcnews.com/j/newscms/2016_32/1665641/ss-160812-twip-02_3380f5e9d30b766138155f8c3f11f9a8.nbcnews-fp-1200-800.jpg");
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnIoRHa9XM8C_2ZUSnG_RT6EOMlB8N6LSkTb2ZGSQzGttdFDL_");
     background-position: center;
+    background-size:cover;
 }
 p {
-    background-position: center;
+    background-color: white;
+    margin: 30px;
+    font-size: 20px;
+    text-align: center;
 }
 header {
-    display: block;
     text-align: center;
     border: 2px solid white;
+    margin-bottom: 40px;
+    font-size: 50px;
+    background-color: white;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 .homeBar, .contactBar, .aboutBar {
-    display:  inline;
+    display: block;
     background-color: black;
     color: white;
     font-size: 25px;
-}
-.contactBar {
-    border: transparent;
-    border-right-width: 10%;
-    border-left-width: 10%;
+    margin: 15px;
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
 }
 h1 {
     font-size: 75px;
@@ -33,9 +41,27 @@ h1: hover {
     color: aliceblue;
 }
 main img {
-    margin-left:;
-    height: 200px;
+    margin-left: 13%;
     float: none;
     image-orientation: center;
     
+}
+img {
+    
+}
+.navBar {
+    display: inline-block;
+    height: 100%;
+    widows: 30px;
+    float: left;
+}
+#tiger {
+    margin: inherit;
+}
+footer{
+    display: inline-block;
+    margin-top: 100px;
+    background-color: forestgreen;
+    color:white;
+    font-size: 25px;
 }

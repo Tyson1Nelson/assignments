@@ -9,14 +9,16 @@ for (var i = 0; i < car.length; i++) {
 
 function findLetter(inputString, inputChar) {
     for (var i = 0; i < inputString.length; i++) {
-        if (inputString[1] === inputChar) {
+        if (inputString[i] === inputChar) {
             return inputString.indexOf(inputChar);
-
+        } else {
+            return inputChar + " was not found in " + inputString;
         }
-        return inputChar + " was not found in " + inputString
     }
 }
-console.log(findLetter("hello", "l"));
+console.log(findLetter("hello", "e"));
+
+
 
 function findLowestNumber(arrayTen) {
     var lowest = arrayTen[0];
@@ -27,4 +29,4 @@ function findLowestNumber(arrayTen) {
     }
     return lowest;
 }
-console.log(findLowestNumber([-1, 7, 2, 3, 5, 42, 3425, 4, 5]))
+console.log(findLowestNumber([-1, 7, 2, 3, 5, 42, 3425, 4, 5, 8]))
