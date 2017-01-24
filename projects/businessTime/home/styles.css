@@ -106,7 +106,13 @@ img {
     }
     img {
         margin: 15px;
+    }
 }
-    #para {
-        margin-top: 350px;
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 23px;
+    }
+    main h1 {
+        font-size: 20px;
+    }
 }
