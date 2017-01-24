@@ -78,11 +78,11 @@ function fighting(enemyEncountered, enemyHealth) {
     console.log(enemyEncountered + " has " + enemyHealth + " hp");
 
     if (enemyHealth > 0 && playerHealth > 0) {
-        console.log("enemy has done " + enemyAttacking + " points of damage");
-        console.log("you currently have " + playerHealth + " points");
+        console.log("Enemy has done " + enemyAttacking + " points of damage");
+        console.log("You currently have " + playerHealth + " health points");
         attackOrRun(enemyEncountered, enemyHealth);
 
-    } else if (enemyHealth <= 0) {
+    } else if (enemyHealth <= 0 && playerHealth > 0) {
         console.log("You have defeated " + enemyEncountered);
         var randomItem = items[randomNum(0, 3)];
         inventory(randomItem);
@@ -105,8 +105,4 @@ function escape(enemy, health) {
         console.log("you are unable to escape ");
         fighting(enemy, health);
     }
-}
-
-function attack() {
-   
 }

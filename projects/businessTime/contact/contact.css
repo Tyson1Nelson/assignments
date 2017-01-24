@@ -36,13 +36,7 @@ h1, p {
     text-align: center;
     margin: 30px;
 }
-footer {
-    text-align: center;
-    margin: 30px;
-    margin-top: 100px;
-    background-color: white;
 
-}
 body {
     height: 100%;
     width: 100%;
@@ -64,7 +58,11 @@ img {
 }
 footer {
     clear: both;
+    color: white;
+    text-shadow: -3px 2px 4px black;
+    text-align: center;
     font-size: 30px;
+    margin: 30px;
     margin-top: 100px;
     margin-left: 20%;
     margin-right: 20%;
