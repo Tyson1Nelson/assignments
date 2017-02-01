@@ -1,0 +1,430 @@
+    @font-face {
+        font-family: Avenir;
+        src: url(ziprar.dmg);
+    }
+    
+    .navbar {
+        background-color: white;
+        border: none;
+    }
+    
+    #nav .col {
+        display: inline-block;
+        text-align: center;
+        background-color: white;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    /*////////////catagories dropdown////////////*/
+    
+    .dropbtn {
+        cursor: pointer;
+        padding: .5px;
+        height: auto;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        box-shadow: 2px 2px 4px 0px rgba(125, 125, 125, 0.76);
+        background-color: white;
+        z-index: 1;
+    }
+    
+    .dropdown-content a {
+        color: black;
+        border: 0.5px solid #ddd;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: rgb(243, 195, 172);
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    /*//////////////end of dropdown///////////////////////////*/
+    
+    header .row #input-col {
+        border: 1px solid #ddd;
+        margin-top: 18px;
+        width: 140px;
+        padding: 1px;
+    }
+    
+    header .row .col input {
+        border: none;
+        width: 75%;
+        padding-left: 1px;
+    }
+    
+    #logo {
+        margin-top: 16px;
+        margin-left: 10px;
+    }
+    
+    #slideShow img {
+        max-height: 500px;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+    
+    #email-container {
+        height: 70px;
+        width: auto;
+        background-color: rgb(254, 233, 223);
+    }
+    
+    #email-container > div {
+        text-align: center;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    #email-col input,
+    button {
+        height: 26px;
+        width: auto;
+        background-color: white;
+        border: none;
+    }
+    
+    #email-col {
+        background-color: white;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    #email-col input {
+        width: 85%;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        vertical-align: middle;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    header h1 {
+        font-weight: 400;
+        letter-spacing: .2em;
+        font-size: 30px;
+        font-family: "Bebas Neue Regular", sans-serif;
+        letter-spacing: .05em;
+    }
+    
+    header h2 {
+        font-size: 12px;
+        font-family: Avenir, sans-serif;
+        font-weight: 200;
+        letter-spacing: 2px;
+        padding: none;
+        color: #999999;
+    }
+    
+    header h1:hover {
+        cursor: pointer;
+        color: rgb(243, 195, 172);
+    }
+    
+    header p {
+        text-align: center;
+        font-style: italic;
+    }
+    header p:hover {
+        cursor: pointer;
+    }
+    
+    #border {
+        height: 25px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    artical img {
+        object-fit: ;
+        width: 100%;
+        display: inline-block;
+        margin: 30 auto 30;
+    }
+.artical-img:hover {
+    background-color: white;
+    
+}
+    
+    #related-img .col {
+        padding: 5px;
+    }
+    #related-img img:hover {
+        cursor: pointer;
+    }
+    
+    header > p {
+        letter-spacing: 2px;
+        padding: none;
+        color: #999999;
+    }
+    
+    artical p {
+        font-weight: 300;
+        font-family: Avenir;
+    }
+    /*
+#related-img {
+    border-bottom: 1px solid #ddd;
+}*/
+    
+    #related {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 15px;
+        margin-top: 90px;
+        margin-bottom: 40px;
+    }
+    
+    #related h3 {
+        margin: -11px auto 0px;
+        background-color: white;
+        width: 115px;
+        font-weight: 300;
+    }
+    
+    p {
+        margin-bottom: 30px;
+    }
+    
+    #header-border {
+        border-top: 1px solid #ddd;
+        margin-top: 30px;
+    }
+    
+    #header-border h2 {
+        margin: -7px auto 0px;
+        width: 130px;
+        background-color: white;
+    }
+    
+    .blog-footer {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .blog-footer i {
+        color: rgb(243, 195, 172);
+    }
+    
+    artical a {
+        text-align: center;
+        height: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        border: 1px solid #ddd;
+        color: #9b9b9b;
+        font-size: 15px;
+        font-weight: 300;
+        display: block;
+        width: 106px;
+        margin: 32px auto 0;
+    }
+    
+    artical a:hover {
+        color: white;
+        background-color: #9b9b9b;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    main {
+        margin-top: 50px;
+    }
+    
+    footer .share i {
+        padding-right: 20px;
+        float: left;
+    }
+    
+    footer .comments {
+        float: right;
+    }
+    /*//////////////side bar////////////////*/
+    
+    .widgit-header {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+    }
+    
+    #side-bar {
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    #side-bar .widgit-header #email-col {
+        margin: 5px;
+    }
+    
+    #side-bar header {
+        font-size: 18px;
+        text-transform: uppercase;
+        margin: -45px auto 0px;
+        background-color: white;
+        width: 115px;
+        font-weight: 300;
+        padding-bottom: 20px;
+    }
+    
+    #side-bar .widgit-header {
+        border: 1px solid #ddd;
+    }
+    
+    .widgit-header img {
+        object-fit: contain;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .widgit-header img:hover {
+        cursor: pointer;
+    }
+    
+    #carousel-wishList .carousel-caption {
+        color: black;
+        padding: 1px;
+        margin: -15px;
+    }
+    
+    #carousel-wishList img {
+        padding: 20px;
+    }
+    
+    #carousel-wishList a {
+        background-color: ;
+        color: black;
+        height: 0px;
+        margin-top: 65%;
+    }
+    
+    #follow i {
+        padding: 10px;
+    }
+    
+    i:hover {
+        color: rgb(243, 195, 172);
+        cursor: pointer;
+    }
+    
+    #archive-container {
+        border: 1px solid #ddd;
+        margin-bottom: 50px;
+    }
+
+    #archive {
+        width: 100%;
+        height: 35px;
+        border: none;
+        background-color: white;
+        color: #9b9b9b;
+    }
+    
+    section h2 {
+        font-weight: 300;
+        font-size: 20px;
+        letter-spacing: .1em;
+        font-family: "Bebas Neue Light", sans-serif;
+        margin-bottom: 40px;
+    }
+    
+    #insta-photos .row div {
+        display: inline-block;
+        width: 9.8%;
+        max-height: 150px;
+        margin-left: -3;
+        padding: 0;
+    }
+    
+    #insta-photos img {
+        object-fit: cover;
+        height: 80px;
+        width: 100%;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+    
+    body > footer {
+        margin-top: 60px;
+        background-color: black;
+        color: white;
+        height: 40px;
+        padding-top: 10px;
+        font-size: 12px;
+    }
+    
+    #design {
+        float: left;
+        background-color: black
+    }
+    
+    #c-r {
+        float: right;
+        background-color: black
+    }
+    
+    @media (max-width: 850px) {
+        #insta-photos img {
+            height: 70px;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        #carousel-wishList img {
+            padding: ;
+            margin-left: 25%;
+            margin-right: 25%;
+            padding-top: 1px;
+            width: 50%;
+        }
+        #carousel-wishList {
+            height: 30
+        }
+        #carousel-wishList a {
+            background-color: ;
+            color: black;
+            height: 0px;
+            margin-top: 45%;
+        }
+        #fav #nordstrom {
+            width: 60%
+        }
+        #insta-photos .row div {
+            width: 24.35%;
+            max-height: 150px;
+            border: none;
+        }
+        #insta-photos img {
+            height: 150px;
+        }
+    }
+    
+    @media (max-width: 450px) {
+        body > footer {
+            font-size: 12px;
+        }
+        #insta-photos img {
+            display: block;
+            height: 130px;
+        }
+    }

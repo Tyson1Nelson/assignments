@@ -1,0 +1,161 @@
+main {
+    border: 15px none green;
+    border-radius: 60px;
+    margin: 55px;
+    padding: 15px;
+    background-image: url("http://wallpapercave.com/wp/vWTTP6j.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.btn {
+    background-color: deepskyblue;
+}
+
+h1 {
+    font-size: 45px;
+    color: green;
+    text-shadow: -4px -5px 0px #22da51;
+    display: block;
+    text-align: center;
+    border: 2px none red;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-image: url("http://payload339.cargocollective.com/1/17/547365/9084616/cloud_02_1000.png");
+    background-position: center;
+    background-size: inherit;
+}
+
+#marios {
+    color: #ff0000;
+    text-shadow: -1px -1px 10px rgb(0, 0, 0);
+}
+
+#pest {
+    color: #fffb00;
+    text-shadow: -1px -1px 10px rgb(0, 0, 0);
+}
+
+#control {
+    color: blue;
+    text-shadow: -1px -1px 10px rgb(0, 0, 0);
+}
+
+h2,
+h3,
+h4 {
+    font-size: 30px;
+    color: #f7ff00;
+    text-align: left;
+    border-radius: 20px;
+    border-style: outset;
+    border-color: mediumblue;
+    border-width: 5px;
+    display: inline-block;
+    background-color: blue;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.pic {
+    /*border-radius: 20px;
+    border: 5px solid Blue;*/
+    margin-bottom: 50px;
+    height: 19.5em;
+}
+
+.pic .goomba,
+#bobOmbs,
+.cheep {
+    /* or any custom size */
+    height: 100%;
+    object-fit: contain;
+    margin-left: 10px;
+}
+
+.goomba,
+#bobOmbs {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.goomba,
+#bobOmbs,
+.cheep {
+    border-radius: 20px;
+    border: 5px solid Blue;
+    float: left;
+    display: inline-block;
+    height: 100%;
+    object-fit: contain;
+    margin-left: 10px;
+    float: left;
+    width: 25%;
+    background-color: white;
+}
+
+p,
+#para1,
+#para2,
+#para3 {
+    font-size: 25px;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: inline-block;
+    border-radius: 20px;
+    border: 5px solid Blue;
+    height: 273px;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-left: 10px
+}
+
+body {
+    font-family: slackey;
+    padding: 25px;
+    background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTGETj7kBKDr0eQwoGf1Z9c0hfYg_xK09n9Riy2fqjw5MpGkOpIJQ");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#total {
+    font-size: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.68);
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+footer {
+    background-color: white;
+    display: inline-block;
+    border: 2px outset blue;
+    padding: 10px;
+}
+
+@media (max-width: 700px) {
+    main {
+        background-position: center;
+        background-size: 700px 100%;
+    }
+    .pic {
+        height: 16em;
+    }
+    #para1,
+    #para2,
+    #para3 {
+        height: 225px;
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 20px;
+        padding-top: 40px;
+    }
+    h1 {
+        background-size: 100% 100%;
+    }
+}

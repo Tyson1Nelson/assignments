@@ -1,0 +1,32 @@
+
+#myForm {
+    background-color: aqua;
+    border: 1px ridge black;
+    padding: 30px;
+/*    width: 50%;*/
+    text-align: left;
+    min-height: 100px;
+    max-width: 400px;
+}
+body {
+/*    border: 5px ridge blue;*/
+    font-size: 20px;
+    padding: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: url(sayagata-400px/sayagata-400px.png)
+}
+#output {
+    column-count: 2;
+    column-rule: ;
+    display:inherit;
+}
+@media (max-width: 420px){
+    #myForm {
+        column-count: none;
+        background-color: aquamarine;
+        
+
+    }
+}

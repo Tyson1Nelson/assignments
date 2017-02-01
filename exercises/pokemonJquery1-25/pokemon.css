@@ -1,0 +1,18 @@
+body {
+    font-family: fantasy;
+    margin: 40px;
+    background-color: blue;
+    color: white;
+}
+#addInfo {
+padding: 20px;}
+
+div div {
+    padding: 5px;
+    padding-bottom: 10px;
+    margin: ;
+    font-size: 15px;
+    border: 3px outset lightblue;
+    text-align: center;
+    background-color: white;
+}

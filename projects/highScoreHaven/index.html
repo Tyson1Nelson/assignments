@@ -1,17 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Fly High Score</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href='//fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'>
+    <link href='//fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
     <link rel="stylesheet" href="highScore.css">
 </head>
+
 <body>
-   <header>
-   <h1>Welcome to FLY HIGH-Score</h1>
-   </header>
-   <main>
-       <p>You can post you high scores right here on this website</p>
-   </main>
+    <header>
+        <h1>Welcome to FLY HIGH-Score</h1>
+    </header>
+    <main>
+        <h2>A place You can post your high scores</h2>
+        
+        <form id="myForm">
+            <input id="name" type="text" placeholder="Name (required)"
+            name="name" required>
+            <br>
+            <input id="game" type="text" placeholder="Game Name (required)" name="game" required>
+            <br>
+            <input id="date" type="date" placeholder="Date " name="date" required>
+            <br>
+            <input id="highScore" type="number" placeholder="High Score (required)" name="highScore" onclick="reset">
+            <br>
+            <p>Would you like to add a "friendly" message?</p><p id="trash">Trash talk:
+            <input type="checkbox" id="check" name="trashTalk"></p>
+            <br>
+            <button type="button" id="submitButton" required>Submit</button>
+        </form>
+        <p id="para">Are you curious who's playing what game and also how well they are doing? Well worry no more! Here you can see what games your friends are playing and what score they have.</p>
+    </main>
+    <table>
+        <tr id="row1">
+            <th>Name</th>
+            <th>Game</th>
+            <th>Date</th>
+            <th>High Score</th>
+            <th>Trash Talk</th>
+        </tr>
+        <tbody id="tableRow">
+        </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="highScore.js"></script>
+
 </body>
+
 </html>

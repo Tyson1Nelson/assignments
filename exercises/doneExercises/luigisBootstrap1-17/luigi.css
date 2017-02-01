@@ -1,0 +1,41 @@
+@font-face {
+    font-family: mario;
+    src: url(SuperMario256.ttf);
+}
+body {
+    vertical-align: middle;
+    font-size: 50px;
+    text-align: center;
+}
+.row {
+    max-width: 880px;
+    border:1px solid blue;
+}
+#col1 {
+    height: 71px;
+    font-family: mario;
+    background: yellow;
+    color: red;
+}
+#col2 {
+    background-color: red;
+text-align: center;
+}
+#col3 h1{
+    font-family: mario;
+    color: red;
+}
+#col3 p {
+    font-size: 21px;
+    color: red;
+}
+
+#col4 {
+    height: 71px;
+    background-color: yellow;
+    
+}
+#img {
+    height: 50px;
+    object-fit:contain;
+}

@@ -1,0 +1,79 @@
+h1 {
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 7px 8px 5px black;
+}
+h2 {
+    margin-bottom: 40px;
+}
+main h2, #para {
+    color:rgb(244, 249, 172);
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#para {
+    font-family: Gloria Hallelujah;
+    margin: 30px;
+    color: aqua;
+}
+body {
+    font-family: Barrio;
+    color: aquamarine;
+    background-image:url("dark_embroidery/dark_embroidery.png")
+}
+table {
+    width: 90%;
+    border: 3px solid aquamarine;
+    margin: 20px;
+}
+#row1 {
+    border: 1px solid aquamarine;
+    color:cyan;
+}
+
+#row1 th, td {
+    width: 20%;
+    border: 1px solid aquamarine;
+    text-align: center;
+}
+#inputInfo td {
+    width: 20%;
+    border: 1px solid black;
+}
+#myForm {
+    float: left;
+    border: 15px ridge grey;
+    max-width: 400px;
+    margin-left: 50px;
+    box-shadow: 9px 13px 20px 0px black;
+    margin-bottom: 30px;
+    margin-right: 15px;
+}
+#myForm #trash {
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: inset 7px 6px 20px 6px black;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+input {
+    color:darkslategrey;
+    height: 35px;
+    width: 300px;
+    margin: 10px;
+}
+button {
+    width: 70px;
+    margin: 20px;
+    color: slategrey;
+    background-color: aqua;
+    border-radius: 12px;
+}
+#trash {
+    margin: 10px;
+    margin-top: 30px;
+    border: 1px solid aqua;
+    margin-left: 15px;
+}
+
