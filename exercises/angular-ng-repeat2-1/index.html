@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Repeat">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+</head>
+
+<body ng-controller="MainController">
+    <div ng-repeat="info in player.kills">
+        <h1>Handle: {{ info.handle }}</h1>
+        <h2>Rank: {{ info.rank }}</h2>
+        <div ng-repeat="clan in info.clan">
+            <h3>clan: {{ clan }}</h3>
+        </div>
+    </div>
+    
+    <h2 ng-repeat="handle in kills">hello {{ handle }}</h2>
+    <script src="app.js"></script>
+</body>
+
+</html>

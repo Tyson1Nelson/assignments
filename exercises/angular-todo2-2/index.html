@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My to-do List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body ng-controller="MainController">
+    <form>
+        <div class="row"></div>
+        <div class="col col-xs-12">
+            <h1>To-do's</h1></div>
+        <div class="col col-xs-12 col-sm-6">
+            <label for="title">Title</label>
+            <input name="title" class="form-control" type="text" ng-model="todo.title">
+            <label for="description">Description</label>
+            <textarea name="description" type="text" class="form-control" ng-model="todo.description"></textarea>
+            <label for="image">ImageUrl:</label>
+            <input name="description" class="form-control" type="text" ng-model="todo.imgUrl">
+            <label for="title">price</label>
+            <input id="price-input" name="title" class="form-control" type="number" ng-model="todo.price">
+        </div>
+
+        <div class="col col-xs-12">
+            <button ng-click="addTodo()" class="btn btn-success">submit</button>
+        </div>
+    </form>
+    <div class="row container" >
+        <div id="list" class="col col-xs-6 col-sm-4" ng-model="list" ng-repeat="myTodo in getInfo track by $index">
+            <label for="checkbox">Complete</label>
+            <input type="checkbox" class="pull-lef" ng-model="check">
+            
+            <div>
+                <h3 ng-dblclick="todoitem.$show()" editable-text="myTodo.title"> {{ myTodo.title }} </h3>
+                <p>{{ myTodo.description }} {{ myTodo.image }}<img src="{{ myTodo.imgUrl }}" class="img-responsive img-rounded" ng-hide="check" alt=""></p><p>Price: $ {{ myTodo.price }}</p>
+                <button type="button" class="btn btn-danger glyphicon glyphicon-trash" ng-show="check" ng-click="delete(myTodo, $index)"></button>
+            </div>
+            
+            
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
