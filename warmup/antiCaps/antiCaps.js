@@ -1,9 +1,11 @@
+
 function antiCaps(str) {
     for (var i = 0; i < str.length; i++) {
         var upp = str[i];
-
+        var string = [];
         if (upp === upp.toLowerCase()) {
-            console.log(upp.toUpperCase());
+            upperCase = upp.toUpperCase();
+            console.log(upperCase);
         } else {
             isCaps(upp);
         }

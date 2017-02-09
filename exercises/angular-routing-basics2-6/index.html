@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="routingApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>route exercise</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjord+One" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="#!/home">
+            <button type="button" class="btn btn-primary">Home</button>
+        </a>
+        <a href="#!/about">
+            <button type="button" class="btn btn-primary">About</button>
+        </a>
+        <a href="#!/why">
+            <button type="button" class="btn btn-primary">Why I Love Utah</button>
+        </a>
+    </nav>
+
+
+    <h1>{{ name }}</h1>
+    <div ng-view>
+        <h4>{{ name }}</h4>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="home/home.js"></script>
+    <script src="about/about.js"></script>
+    <script src="why/why.js"></script>
+</body>
+
+</html>

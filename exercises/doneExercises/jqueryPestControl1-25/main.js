@@ -33,7 +33,13 @@ $("#submitCheeps").click(function () {
 
 });
 
-
+$("#nightView").click(function() {
+    $("main").css("background-image", "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkI90GMyTYoz2yr5Z-vM121jZY6snzzjZYxmotk5LGN72uxApY')");
+    $("main").css("color", "grey");
+    $(".pic p").css("background-color", "rgba(0, 0, 0, 0.68)");
+    $("body").css("background-image", "url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTXDTCdKr4C9gxDeZD7bT1SXglIifyUQT-Dpz9GoVmRtQY2fgwh-g')");
+    $("body").css("background-image", "contain");
+});
 
 
 /////////////////////////////////////////////////////

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>StarWars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+</head>
+
+<body>
+<audio src="audio/FUZZBALL.WAV"></audio>
+<audio src="audio/wookie.wav"></audio>
+<audio src="audio/yoda-help_you_i_can.mp3"></audio>
+<!--   NavBar   -->
+    <nav>
+        <a href="#/home">
+            <button type="button" class="btn btn-warning">home</button>
+        </a>
+        <a href="#/about">
+            <button type="button" class="btn btn-warning">about</button>
+        </a>
+        <a href="#/explore">
+            <button type="button" class="btn btn-warning">explore</button>
+        </a>
+    </nav>
+    
+<!-------    ------->
+   
+    <div ng-view>
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="home/home.js"></script>
+    <script src="about/about.js"></script>
+    <script src="explore/explore.js"></script>
+    <script src="service.js"></script>
+</body>
+
+</html>

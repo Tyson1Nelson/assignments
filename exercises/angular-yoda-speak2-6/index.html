@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>yoda speak</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body ng-controller="YodaController">
+   <h1>Yoda speak</h1>
+    <textarea type="text" ng-model="textInput"></textarea>
+    <button type="button" ng-model="button" ng-click="submitInfo(textInput)">translate</button>
+    <h2>{{ yoda }}</h2>
+    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTmoQ9oy4fo53dc5Migqci1X3CxJx-kSVHJHuEOlIBdhk2zwy__" alt="">
+    <script src="app.js"></script>
+    <script src="service.js"></script>
+</body>
+
+</html>

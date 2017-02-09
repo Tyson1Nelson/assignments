@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body ng-controller="MainController">
+   <h1>Ugly-Things</h1>
+    <form>
+        <div id="inputArea" class="row container">
+            <div class="col-xs-12 col-sm-4 form-group">
+                <input type="text" class="form-control" ng-model="imgInfo.title" placeholder="Title" ng-minlength="3">
+            </div>
+            <div class="col-xs-12 col-sm-4 form-group">
+                <input type="text" class="form-control" ng-model="imgInfo.description" placeholder="Description" ng-minlength="3">
+            </div>
+            <div class="col-xs-12 col-sm-4 form-group">
+                <input type="text" class="form-control" ng-model="imgInfo.img" placeholder="image Url" ng-minlength="3">
+            </div>
+            <div class="col col-sx-12">
+                <button type="button" class="btn btn-success center-block" ng-click="showInfo(imgInfo)" ng-disabled="!imgInfo.title || !imgInfo.img ">submit</button>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div id="box" class="col-xs-12 col-sm-4 form-group container" ng-repeat="pic in picList track by $index">
+            <div>
+                <h2> {{ pic.title }}</h2>
+                <p>{{ pic.description}}</p>
+            </div>
+            <div>
+                <img ng-src="{{pic.imgUrl}}" class="img-responsive" alt="">
+                <label for="checked">see comments</label>
+                <input type="checkbox" ng-model="checked">
+            </div>
+            <div>
+                <span ng-show="checked" ><p>{{ commented }}</p></span>
+            </div>
+            <div>
+                <textarea type="text" ng-show="checked" ng-model="commentInput"></textarea><br>
+                <button type="button" class="btn btn-warning glyphicon glyphicon-edit" ng-click="comment(commentInput)" ng-model="addComment" ng-show="checked">comment</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

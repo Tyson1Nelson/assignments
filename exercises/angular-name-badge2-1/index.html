@@ -10,56 +10,56 @@
 </head>
 
 <body ng-controller="MainController">
-    <form action="">
-        <div class="row">
-            <div class="col col-xs-6">
-                <input type="text" placeholder="first Name" ng-model="personInfo.firstName" ng-minlength="3">
+    <form>
+        <div class="row container">
+            <div class="col col-xs-6 form-group">
+                <input type="text" class="form-control" placeholder="first Name" ng-model="personInfo.firstName" ng-minlength="3">
             </div>
-            <div class="col col-xs-6">
-                <input type="text" placeholder="Last Name" ng-model="personInfo.lastName" ng-minlength="3">
+            <div class="col col-xs-6 form-group">
+                <input type="text" class="form-control" placeholder="Last Name" ng-model="personInfo.lastName" ng-minlength="3">
             </div>
-            <div class="col col-xs-6">
-                <input type="text" placeholder="Email" ng-model="personInfo.email" ng-minlength="3">
+            <div class="col col-xs-6 form-group">
+                <input type="text" class="form-control" placeholder="Email" ng-model="personInfo.email" ng-minlength="3">
             </div>
-            <div class="col col-xs-6">
-                <input type="text" placeholder="Place of Birth" ng-model="personInfo.birthPlace" ng-minlength="3">
+            <div class="col col-xs-6 form-group">
+                <input type="text" class="form-control" placeholder="Place of Birth" ng-model="personInfo.birthPlace" ng-minlength="3">
             </div>
-            <div class="col col-xs-6">
-                <input type="number" placeholder="Phone" ng-model="personInfo.phone" ng-minlength="9" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+            <div class="col col-xs-6 form-group">
+                <input type="tel"  class="form-control" placeholder="Phone" ng-model="personInfo.phone" ng-minlength="9" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
             </div>
-            <div class="col col-xs-6">
-                <input type="text" placeholder="Favorite Food" ng-model="personInfo.favFood" ng-minlength="3">
+            <div class="col col-xs-6 form-group">
+                <input type="text" class="form-control" placeholder="Favorite Food" ng-model="personInfo.favFood" ng-minlength="3">
             </div>
-            <div id="input-about" class="col col-xs-12">
-                <textarea type="text" placeholder="Tell us about yourself..." ng-model="personInfo.about"></textarea>
+            <div id="input-about" class="col col-xs-12 form-group">
+                <textarea rows="5" type="text" class="form-control" placeholder="Tell us about yourself..." ng-model="personInfo.about"></textarea>
             </div>
             <div id="button-row" class="col col-xs-12">
-                <button ng-click="addInfo(personInfo)" ng-disabled="!personInfo.firstName || !personInfo.lastName || !personInfo.email || !personInfo.birthPlace || !personInfo.phone || !personInfo.favFood || !personInfo.about" type="button">submit</button>
+                <button class="btn btn-success" ng-click="addInfo(personInfo)" ng-disabled="!personInfo.firstName || !personInfo.lastName || !personInfo.email || !personInfo.birthPlace || !personInfo.phone || !personInfo.favFood || !personInfo.about" type="button">submit</button>
             </div>
         </div>
     </form>
-    <div id="badge-row" class="row">
-        <div id="badge-col" class="col col-xs-12">badge:</div>
-        <div class="col col-xs-6">
+    <div id="badge-row" class="row container">
+        <div id="badge-col" class="col col-xs-12">Badge:</div>
+        <div class="col col-xs-12">
             First Name: {{ formInfo.firstName }}
         </div>
-        <div class="col col-xs-6">
+        <div class="col col-xs-12">
             Last Name: {{ formInfo.lastName}}
         </div>
-        <div class="col col-xs-6">
+        <div class="col col-xs-12">
             Email: {{ formInfo.email }}
         </div>
-        <div class="col col-xs-6">
+        <div class="col col-xs-12">
             Place of Birth: {{ formInfo.birthPlace }}
         </div>
-        <div class="col col-xs-6">
+        <div class="col col-xs-12">
             Phone Number: {{ formInfo.phone }}
         </div>
-        <div class="col col-xs-6">
+        <div class="col col-xs-12">
             Favorite Food: {{ formInfo.favFood }}
         </div>
 <!--        <div class="container">-->
-            <div class="col col-xs-12" id="about">{{ formInfo.about }}</div>
+            <div class="col col-xs-12"  id="about">{{ formInfo.about }}</div>
 <!--        </div>-->
     </div>
     <script src="app.js"></script>

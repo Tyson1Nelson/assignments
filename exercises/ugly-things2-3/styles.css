@@ -1,0 +1,37 @@
+h1 {
+    text-align: center;
+}
+
+#box {
+    text-align: center;
+}
+
+body {
+    background-image: url("triangular/triangular.png");
+    font-family: fantasy;
+}
+.row img {
+    height: 180px;
+    width: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 1px solid black;
+}
+#inputArea {
+    background-color: rgba(0, 0, 0, 0.51);;
+    width: 100%;
+    padding: 5%;
+    margin-left: 0.1px;
+    border: 10px ridge #4380a5;
+    margin-bottom: 30px;
+}
+h1 {
+    font-size: 45px;
+    font-weight:800;
+    text-shadow: -4px 5px 3px black;
+    color: yellow;
+}
+h2 {
+    border-bottom: 5px ridge #4380a5;
+}

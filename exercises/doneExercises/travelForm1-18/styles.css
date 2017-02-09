@@ -2,8 +2,7 @@ img {
     float: right;
     border-style: outset;
     border-width: 8px;
-    margin-top: 45px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 h1 {
     text-align: center;
@@ -13,6 +12,11 @@ h1 {
 #myForm {
     border: 5px solid black;
     padding: 15px;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.80);
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 #p1 {
     display: block;
@@ -25,7 +29,7 @@ p {
     margin-top: 30px;
 }
 body {
-    background-image:url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSfNp0K0DJzkT_SXkEi3DKeTdqAVyaDUSGi1zF_m2AU4vHuXrHK")
-    background-size: contain;
+    background-image:url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSfNp0K0DJzkT_SXkEi3DKeTdqAVyaDUSGi1zF_m2AU4vHuXrHK");
+    background-size: cover;
     background-repeat: no-repeat;
 }

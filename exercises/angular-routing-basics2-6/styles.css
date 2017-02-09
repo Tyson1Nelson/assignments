@@ -1,0 +1,52 @@
+nav{
+    text-align: center;
+}
+nav .btn {
+    width: 130px;
+    font-size: 12px;
+}
+nav .btn a{
+    color: white;
+}
+#whyILove {
+    margin: 30px;
+    background-color:darkgray;
+    border: 10px ridge white;
+    border-radius: 10px;
+}
+#whyILove .col {
+    max-height: 325px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 20px;
+}
+#whyILove img {
+    height: 250px;
+}
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+body {
+    background-image: url("shattered/shattered.png");
+    font-family: 'Aclonica', sans-serif;
+}
+#aboutPage {
+    border: 5px ridge black;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 30px;
+    width: 75%;
+}
+p{
+    font-family: 'Fjord One', serif;
+    background-color: rgba(255, 255, 255, 0.54);
+    padding: 10px;
+}
+#homePage img{
+    width: 75%;
+    height: auto;
+    margin-bottom: 40px;
+}

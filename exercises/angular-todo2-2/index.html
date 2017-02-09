@@ -26,16 +26,17 @@
         </div>
 
         <div class="col col-xs-12">
-            <button ng-click="addTodo()" class="btn btn-success">submit</button>
+            <button ng-click="addTodo(todo)" class="btn btn-success">submit</button>
         </div>
     </form>
     <div class="row container" >
         <div id="list" class="col col-xs-6 col-sm-4" ng-model="list" ng-repeat="myTodo in getInfo track by $index">
             <label for="checkbox">Complete</label>
-            <input type="checkbox" class="pull-lef" ng-model="check">
+            <input type="checkbox" class="pull-left" ng-change="complete(myTodo, index)" ng-model="check">
             
             <div>
-                <h3 ng-dblclick="todoitem.$show()" editable-text="myTodo.title"> {{ myTodo.title }} </h3>
+                <h3> {{ myTodo.title }} </h3><button type="button" class="btn btn-warning glyphicon glyphicon-edit pull-right" ng-click="edit"></button>
+                
                 <p>{{ myTodo.description }} {{ myTodo.image }}<img src="{{ myTodo.imgUrl }}" class="img-responsive img-rounded" ng-hide="check" alt=""></p><p>Price: $ {{ myTodo.price }}</p>
                 <button type="button" class="btn btn-danger glyphicon glyphicon-trash" ng-show="check" ng-click="delete(myTodo, $index)"></button>
             </div>
@@ -44,6 +45,7 @@
         </div>
     </div>
     <script src="app.js"></script>
+    <script src="service.js"></script>
 </body>
 
 </html>
