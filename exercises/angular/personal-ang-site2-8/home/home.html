@@ -1,0 +1,172 @@
+<h1>Welcome to the Star Wars Information Website!</h1>
+<p>Click on a characters picture for information about that character</p>
+<div class="row" id="home">
+    <div class="col-xs-4 col-sm-4" ng-click="charicterInfo">
+        <!--       luke      -->
+        <img class="img-responsive" src="http://vignette2.wikia.nocookie.net/starwars/images/5/57/Luke_Skywalker_SWGTCG.jpg/revision/latest/scale-to-width-down/230?cb=20090319142920" alt="Luke" ng-click="showLuke = !showLuke">
+    </div>
+    <div class="col-xs-4 col-sm-4">
+        <!--      C-3PO     -->
+        <img class="img-responsive" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTC3SZ-9hNcuff-PqeS22TAo3VT80YwvGdQS4dc0KzADEZJrtuVSw" alt="" ng-click="showC3 = !showC3">
+    </div>
+    <div class="col-xs-4 col-sm-4">
+        <!--      R2-D2      -->
+        <img class="img-responsive" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS-2YYE3oNDBnrKCHDABEqQ6VYXjt4Rx2pTaiyUUmB31cDhbUA3" alt="" ng-click="showR2 = !showR2">
+    </div>
+</div>
+<div class="row">
+    <div class="col col-xs-4 col-sm-4">
+        <div ng-show="showLuke">
+            <h4>{{people[0].name}}</h4>
+            <p>Birth year: {{people[0].birth_year}}
+                <br>Mass: {{people[0].mass}}
+                <br>Height: {{people[0].height}}
+                <br>Planet: {{lukeHome}}
+                <br>Species: {{lukeSpecies}}
+            </p>
+        </div>
+    </div>
+    <div class="col col-xs-4 col-sm-4">
+        <div ng-show="showC3">
+            <h4>{{people[1].name}}</h4>
+            <p>Birth year: {{people[1].birth_year}}
+                <br>Mass: {{people[1].mass}}
+                <br>Height: {{people[1].height}}
+                <br>Planet: {{c3poHome}}
+            </p>
+        </div>
+    </div>
+    <div class="col col-xs-4 col-sm-4">
+        <div ng-show="showR2">
+            <h4>{{people[2].name}}</h4>
+            <p>Birth year: {{people[2].birth_year}}
+                <br>Mass: {{people[2].mass}}
+                <br>Height: {{people[2].height}}
+                <br>Planet: {{r2d2Home}}
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-4">
+        <!--        Darth Vader      -->
+        <img class="img-responsive" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRgs3JswCm0-fbvYr2Ev-DsZkRwELGVm4XnECtOZF9WafPdWh7WNQ" alt="Darth Vader" ng-click="showDarth = !showDarth">
+    </div>
+    <div class="col-xs-4">
+        <!--        Liea        -->
+        <img class="img-responsive" src="http://images.techtimes.com/data/images/full/105279/princess-leia.jpg?w=600" alt="Princess Leia" ng-click="showLeia = !showLeia">
+    </div>
+    <div class="col-xs-4">
+        
+
+        <img class="img-responsive" src="https://s-media-cache-ak0.pinimg.com/originals/45/72/22/45722298aa543bcbb74952481d785b99.jpg" alt="Owen Lars"  ng-click="showOwen = !showOwen">
+    </div>
+</div>
+<div class="row">
+    <div class="col col-xs-4">
+        <!--       darth        -->
+        <div ng-show="showDarth">
+            <h4>{{people[3].name}}</h4>
+            <p>Birth year: {{people[3].birth_year}}
+                <br>Mass: {{people[3].mass}}
+                <br>Height: {{people[3].height}}
+                <br>Planet: {{darthHome}}
+            </p>
+        </div>
+    </div>
+    <div class="col col-xs-4">
+        <!--       leia       -->
+        <div ng-show="showLeia">
+            <h4>{{people[4].name}}</h4>
+            <p>Birth year: {{people[4].birth_year}}
+                <br>Mass: {{people[4].mass}}
+                <br>Height: {{people[4].height}}
+                <br>Planet: {{leiaHome}}
+            </p>
+        </div>
+    </div>
+    <div class="col col-xs-4">
+        <!--       Owen       -->
+        <div ng-show="showOwen">
+            <h4>{{people[5].name}}</h4>
+            <p>Birth year: {{people[5].birth_year}}
+                <br>Mass: {{people[5].mass}}
+                <br>Height: {{people[5].height}}
+                <br>Planet: {{owenHome}}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-4">
+<!--        beru lars       -->
+        <img class="img-responsive" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR5jlFuvlJgUnSqjLxpj1kWdmruriIXEVUwpWvVhSDJGPd8UkAV" alt="beru lars"  ng-click="showBeru = !showBeru">
+    </div>
+    <div class="col-xs-4">
+<!--        r5d4         -->
+        <img class="img-responsive" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQwV2RoklmBep9D7bNUEZ-JrzthHpnfVYbfIg1Ei_7fukdFF4a9" alt=""  ng-click="showR5 = !showR5">
+    </div>
+    <div class="col-xs-4">
+<!--        biggs        -->
+        <img class="img-responsive" src="http://vignette1.wikia.nocookie.net/starwars/images/4/43/Biggs.png/revision/latest?cb=20130305010633" alt=""  ng-click="showBiggs = !showBiggs">
+    </div>
+</div>
+<div class="row">
+    <div class="col col-xs-4">
+        <!--       beru        -->
+        <div ng-show="showBeru">
+            <h4>{{people[6].name}}</h4>
+            <p>Birth year: {{people[6].birth_year}}
+                <br>Mass: {{people[6].mass}}
+                <br>Height: {{people[6].height}}
+                <br>Planet: {{beruHome}}
+            </p>
+        </div>
+    </div>
+    <div class="col col-xs-4">
+        <!--       r5d4       -->
+        <div ng-show="showR5">
+            <h4>{{people[7].name}}</h4>
+            <p>Birth year: {{people[7].birth_year}}
+                <br>Mass: {{people[7].mass}}
+                <br>Height: {{people[7].height}}
+                <br>Planet: {{r5d4Home}}
+            </p>
+        </div>
+    </div>
+    <div class="col col-xs-4">
+        <!--       Biggs       -->
+        <div ng-show="showBiggs">
+            <h4>{{people[8].name}}</h4>
+            <p>Birth year: {{people[8].birth_year}}
+                <br>Mass: {{people[8].mass}}
+                <br>Height: {{people[8].height}}
+                <br>Planet: {{biggsHome}}
+            </p>
+        </div>
+    </div>
+</div>  
+
+<div class="row">
+    <div class="col-xs-3 col-sm-2">
+        <h5></h5>
+
+        <img src="" alt="">
+    </div>
+    <div class="col-xs-3 col-sm-2">
+        <img src="" alt="">
+    </div>
+    <div class="col-xs-3 col-sm-2">
+        <img src="" alt="">
+    </div>
+    <div class="col-xs-3 col-sm-2">
+        <img src="" alt="">
+    </div>
+    <div class="col-xs-3 col-sm-2">
+        <img src="" alt="">
+    </div>
+    <div class="col-xs-3 col-sm-2">
+        <img src="" alt="">
+    </div>
+</div>

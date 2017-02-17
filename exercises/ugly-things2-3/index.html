@@ -37,13 +37,14 @@
                 <img ng-src="{{pic.imgUrl}}" class="img-responsive" alt="">
                 <label for="checked">see comments</label>
                 <input type="checkbox" ng-model="checked">
+                <button class="btn btn-danger" ng-click="delete(pic, $index)">delete</button>
             </div>
             <div>
-                <span ng-show="checked" ><p>{{ commented }}</p></span>
+                <span ng-show="checked" ng-repeat="comment in pic.comments track by $index"><p>{{ comment }}</p><button ng-click="deleteComment(pic, $index)">delete info</button></span>
             </div>
             <div>
-                <textarea type="text" ng-show="checked" ng-model="commentInput"></textarea><br>
-                <button type="button" class="btn btn-warning glyphicon glyphicon-edit" ng-click="comment(commentInput)" ng-model="addComment" ng-show="checked">comment</button>
+                <textarea type="text" ng-show="checked" ng-model="pic.newComment"></textarea><br>
+                <button type="button" class="btn btn-warning glyphicon glyphicon-edit" ng-click="comment(pic)" ng-show="checked">comment</button>
             </div>
         </div>
     </div>

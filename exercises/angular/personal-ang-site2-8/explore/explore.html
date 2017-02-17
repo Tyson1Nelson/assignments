@@ -1,0 +1,49 @@
+<h1>Explore</h1>
+<div id="explorePg" class="row">
+    <div id="exploreCol" class="col-sm-6">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <button class="btn btn-primary" ng-click="showFilms = !showFilms" ng-model="showInfoBtn">Star Wars Movies</button>
+            </div>
+        </div>
+        <div id="filmInfo" class="col-sm-12 col-md-6 text-center" ng-repeat="film in films | orderBy: 'episode_id' track by $index" ng-show="showFilms">
+            <h3> {{film.title}} </h3>
+            <h4>episode: {{ film.episode_id}}</h4>
+            <h5>release date: <br> {{film.release_date}}</h5>
+            <h4 ng-show="showFilms" ng-click="people(film, $index)">"click here" for characters</h4>
+            <div class="col-xs-6" ng-repeat="character in film.people track by $index">
+                <p> {{ character }}</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="col-xs-12 text-center">
+            <button class="btn btn-danger" ng-click="showCharacters = !showCharacters || playYoda()">Main Characters</button>
+        </div>
+        <div class="col-xs-4 col-sm-4" ng-repeat="actor in characters track by $index" ng-show="showCharacters">
+            <h4> {{ actor.name }} </h4>
+            <p>birth year: {{ actor.birth_year }}
+                <br>Eye Color: {{ actor.eye_color }}
+                <br>Hair Color: {{ actor.hair_color }}
+                <br>Gender: {{ actor.gender }} </p>
+        </div>
+        <div class="col-xs-4" ng-repeat="actor in pg2Characters" ng-show="showCharacters">
+            <h4> {{ actor.name }} </h4>
+            <p>birth year: {{ actor.birth_year }}
+                <br>Eye Color: {{ actor.eye_color }}
+                <br>Hair Color: {{ actor.hair_color }}
+                <br>Gender: {{ actor.gender }} </p>
+        </div>
+    </div>
+    <div class="col col-xs-12">
+        <div class="col col-xs-12" ng-repeat="crawl in films | orderBy: 'episode_id'">
+            <div class="col col-xs-6">
+                <button class="btn btn-primary" ng-click="">Episode {{crawl.episode_id}}</button>
+            </div>
+            <div class="col col-xs-6">
+                <p> {{ crawl.title }} </p>
+            </div>
+        </div>
+    </div>
+</div>

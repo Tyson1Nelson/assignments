@@ -1,0 +1,27 @@
+header {
+    background-color: yellow;
+    padding:30px;
+    border: 15px outset #1AE4FF;
+    box-shadow: 2px 3px 20px 0px black;
+}
+header button, input {
+    margin-top: 20px
+}
+section .col{
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.31);
+    margin-top: 20px;
+/*
+    border: 10px solid #15A6FF;
+    box-shadow: -1px 4px 10px 0px #3e6cec;
+*/
+    min-height: 200px;
+}
+section {
+    padding:30px
+}
+
+body {
+    background-color: #15A6FF;
+    padding: 20px
+}

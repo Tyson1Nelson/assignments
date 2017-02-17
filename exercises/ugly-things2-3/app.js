@@ -8,25 +8,24 @@ app.controller("MainController", ["$scope", function ($scope) {
         $scope.pic = {
             title: imgInfo.title,
             imgUrl: imgInfo.img,
-            description: imgInfo.description
-            
+            description: imgInfo.description,
+            comments:[]
         };
         $scope.picList.push($scope.pic);
-        $scope.imgInfo = {};
+//        $scope.imgInfo = {};
     };
-    $scope.delete = function(item, index){
-        $scope.picList.splice(item, 1)
+    $scope.delete = function(pic, index){
+        $scope.picList.splice(index, 1)
+    }
+    $scope.deleteComment = function (pic, index) {
+        pic.comments.splice(index, 1);
     }
     
-    $scope.commentList = [];
     
-    $scope.comment = function(input){
-        
-        $scope.commented = input;
-//        console.log($scope.commented);
-        $scope.commentList.push(input);
-        
-//        console.log($scope.commentList);
+    $scope.comment = function(uglyThing){
+        uglyThing.comments.push(uglyThing.newComment);
+        delete uglyThing.newComment;
+    
     }
 
 }]);

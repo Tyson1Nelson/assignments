@@ -1,0 +1,36 @@
+body {
+    padding: 30px;
+    background-color: black;
+    color: yellow;
+}
+button {
+    margin-bottom: 20px;
+}
+#filmBtn {
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#filmBtn button {
+    margin-bottom:20px;
+}
+
+#home div {
+    vertical-align:text-bottom;
+}
+img {
+    max-height: 245px;
+    vertical-align: bottom;
+}
+.row {
+    vertical-align: bottom;
+    margin-bottom: 10px;
+}
+#aboutPage p{
+    color:black;
+    background-color: white;
+    padding: 10px;
+}
+#explorePg button {
+    margin-bottom: 40px;
+}
