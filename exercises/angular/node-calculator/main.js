@@ -1,5 +1,4 @@
 var calc = require("./calc");
-console.log(calc.add);
 function calculator(num1, num2, operation) {
     switch (operation) {
     case "add":
@@ -15,9 +14,9 @@ function calculator(num1, num2, operation) {
         return calc.div(num1, num2);
         break;
     case "exp":
-        return cal.exp(num1, num2);
+        return calc.exp(num1, num2);
         break;
     }
 }
 
-console.log(calculator(1, 2, "mult"))
+console.log(calculator(3, 3, "exp"))

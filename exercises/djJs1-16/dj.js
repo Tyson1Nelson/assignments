@@ -3,7 +3,7 @@ var box = document.getElementById("box");
 box.addEventListener("mouseover", function () {
     box.style.background = "blue";
     box.style.color = "red";
-})
+});
 
 box.addEventListener("mousedown", function () {
     box.style.background = "red";
@@ -20,17 +20,28 @@ box.addEventListener("dblclick", function () {
     box.style.color = "orange";
 })
 
-var body = document.getElementById("body")
+//var notBox = document.getElementsByClassName("notBox");
+//
+//notBox.addEventListener("wheel", function () { 
+//    console.log("sdfsadf")
+//    box.style.background = "orange";
+//});
 
-
-box.addEventListener("wheel", function () {
-    if(!box) {
-    box.style.background = "orange";
-    }
-})
-//make two empty div's with a left margin of 500px and one with the top margin of 500px.
-box.addEventListener("keypress", function (event) {
+window.addEventListener('keyup', function () {
     if (event.keyCode === 66) {
+        console.log("hello");
         box.style.background = "blue";
-    }
-})
+    } else if (event.keyCode === 82) {
+        console.log("hello");
+        box.style.background = "red";
+    } else if (event.keyCode === 89) {
+        console.log("hello");
+        box.style.background = "yellow";
+    } else if (event.keyCode === 71) {
+        console.log("hello");
+        box.style.background = "green";
+    } else if (event.keyCode === 79) {
+        console.log("70");
+        box.style.background = "orange";
+    };
+}, false);

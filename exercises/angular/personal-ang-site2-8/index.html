@@ -10,27 +10,30 @@
 </head>
 
 <body>
-<audio src="audio/FUZZBALL.WAV"></audio>
-<audio src="audio/wookie.wav"></audio>
-<audio src="audio/yoda-help_you_i_can.mp3"></audio>
-<!--   NavBar   -->
-    <nav>
+    <!--   NavBar   -->
+    <nav class="text-center" ng-controller="MainController">
         <a href="#/home">
-            <button type="button" class="btn btn-warning">home</button>
+            <button type="button" id="homeBtn" ng-click="lightSaber()" class="btn btn-warning">
+                <p>Home</p>
+            </button>
         </a>
         <a href="#/about">
-            <button type="button" class="btn btn-warning">about</button>
+            <button type="button" id="aboutBtn" ng-click="lightSaber2()" class="btn btn-warning">
+                <p>About</p>
+            </button>
         </a>
         <a href="#/explore">
-            <button type="button" class="btn btn-warning">explore</button>
+            <button type="button" id="exploreBtn" ng-click="lightSaber3()" class="btn btn-warning">
+                <p>Explore</p>
+            </button>
         </a>
     </nav>
-    
-<!-------    ------->
-   
+
+    <!------- end navbar   ------->
+
     <div ng-view>
     </div>
-    
+
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
     <script src="app.js"></script>
     <script src="home/home.js"></script>

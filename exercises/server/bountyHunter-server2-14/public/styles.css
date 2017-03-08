@@ -1,0 +1,95 @@
+#input {
+    border: 5px outset black;
+    padding: 10px;
+    background-color: #888888;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    box-shadow: -6px 7px 20px black;
+}
+
+.container {
+    padding: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.container input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+body {
+    padding: 20px;
+    /*    background-color: dimgrey;*/
+    background-image: url("http://img11.deviantart.net/cade/i/2013/273/8/0/master_chief_and_cortana_by_tonykordos-d6oo4h7.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+#output {
+    margin-top: 15px;
+}
+
+#bountyOutput {
+    background-color: white;
+    border: 5px solid black;
+    padding: 15px;
+    box-shadow: -6px 7px 20px black;
+}
+
+#editBtn.ng-click {
+    background-color: ;
+}
+
+#input button:disabled {
+    background-color: #ff8383;
+}
+input.ng-invalid{
+    border: 1px solid red;
+}
+input.ng-valid:focus {
+    background-color: lightgreen;
+}
+
+.row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+* And with max cross-browser enabled.
+* Nobody should ever write this by hand. 
+* Use a preprocesser with autoprefixing.
+*/
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.is-flex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}

@@ -1,19 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="MyApp">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body ng-controller="MainController">
-   <input type="text">
-   
-    <h1>hey</h1>
-    <h3>this is a test to see if its working</h3>
-    <h2> {{ hunter.firstName }} </h2>
-    
+    <div id="input" class="row container">
+        <div class="col col-xs-12 col-sm-4">
+            <input class="form-control" type="text" placeholder="first name" ng-model="input.firstName" ng-minlength="2" required>
+        </div>
+        <div class="col col-xs-12 col-sm-4">
+            <input class="form-control" type="text" placeholder="Last Name" ng-model="input.lastName" ng-minlength="2" required>
+        </div>
+        <div class="col col-xs-12 col-sm-4">
+            <input class="form-control" type="number" placeholder="Bounty Amount" ng-model="input.bountyAmount" ng-minlength="1" required>
+        </div>
+        <div class="col col-xs-6">
+            <div class="col col-xs-12 col-sm-4">
+                <input type="radio" name="type" ng-model="input.type" value="Sith" checked>
+                <label> Sith</label>
+            </div>
+            <div class="col col-xs-12 col-sm-4">
+                <input type="radio" name="type" ng-model="input.type" value="Jedi">
+                <label> Jedi</label>
+            </div>
+            <div class="col col-xs-12 col-sm-4">
+                <input type="checkbox" name="living" ng-model="input.living" value="false">
+                <label> Dead</label>
+            </div>
+        </div>
+        <div class="col col-xs-12 text-center">
+            <button class="btn btn-success" type="button" ng-click="addBounty(input)" ng-disabled="!input.firstName || !input.lastName || !input.bountyAmount">submit</button>
+        </div>
+    </div>
+    <div class="row is-flex container">
+        <div id="output" class="col-sm-4" ng-model="bounty" ng-repeat="person in hunted track by $index">
+            <div id="bountyOutput">
+                <h3 ng-hide="editBounty">Name:<br>{{ person.firstName }} {{ person.lastName }}</h3>
+                <h4 ng-hide="editBounty">Bounty: {{ person.bountyAmount }} </h4>
+                <h5 ng-hide="editBounty">Type: {{ person.type }} </h5>
+                <label> Still living: </label>
+                <input type="checkbox" name="isAlive" value="false" ng-model="person.living " ng-click="update(person)">
+                <p> Alive: {{ person.living }} </p>
+                <div>
+                    <h5 ng-show="editBounty">First Name:</h5>
+                    <input type="text" class="form-control" ng-model="person.firstName" placeholder="First Name" ng-show="editBounty">
+                    <h5 ng-show="editBounty">Last Name:</h5>
+                    <input type="text" class="form-control" ng-model="person.lastName" placeholder="Last Name" ng-show="editBounty">
+                    <h5 ng-show="editBounty">Bounty:</h5>
+                    <input type="number" class="form-control" ng-model="person.bountyAmount" placeholder="Bounty Amount" ng-show="editBounty">
+                    <button data-container="body" data-toggle="popover" data-placement="top" data-content="Success" id="editBtn" class="btn btn-primary" ng-show="editBounty" ng-model="editBtn" ng-click="update(person, success, $index)">Submit Change</button>
+                    <button class="btn btn-danger glyphicon glyphicon-trash" ng-hide="editBounty" ng-click="deleteBounty(person, $index)"></button>
+                    <button class="btn btn-warning glyphicon glyphicon-pencil" ng-click="editBounty = !editBounty"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
-    <script src="angular.js"></script>
+    <script src="app.js"></script>
     <script src="service.js"></script>
 </body>
+
 </html>

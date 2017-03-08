@@ -1,0 +1,119 @@
+#description {
+    max-height: 80px;
+    overflow: auto;
+}
+
+body {
+    background-image: url("http://funnypictures3.fjcdn.com/channel_images/f8/7d/f87de1210cfa5bd7ca3b1fd2648f6e73.png"), url("http://www.adweek.com/core/wp-content/uploads/sites/8/2014/07/Vote1.jpg");
+    background-repeat: no-repeat;
+    background-size: contain, 35%;
+    background-position: bottom, top;
+    background-attachment: fixed;
+}
+
+#input {
+    border: 3px solid black;
+    background-image: linear-gradient( to right, red, white, blue 100%);
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 25px;
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 70px;
+    margin-top: 20px;
+    align-content: center;
+    max-width: 900px;
+}
+
+#input div input {
+    align-content: center;
+    max-width: 350px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#voteBtn,
+#voteAmount {
+    float: left;
+    clear: left;
+    display: inline;
+}
+
+#commentBtn .btn-info {
+    background-color: rgb(7, 99, 167);
+    text-shadow: 0px 0px 4px black;
+}
+
+#commentBtn .btn-warning {
+    background-color: #2cada2;
+    border: 1px solid #2cada2;
+    text-shadow: 0px 0px 4px black;
+}
+
+#commentBtn,
+#commentAmount {
+    float: right;
+    clear: right;
+    display: inline;
+    margin-bottom: 10px;
+}
+
+#voteOutput {
+    border: 3px solid black;
+    border-image: ;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 15px;
+    align-items: stretch;
+}
+#voteOutput h3 {
+    border-bottom: 2px solid black;
+    margin-top: 10px;
+}
+#voteOutput textarea {
+    margin-bottom: 5px;
+}
+
+
+row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*
+* And with max cross-browser enabled.
+* Nobody should ever write this by hand. 
+* Use a preprocesser with autoprefixing.
+*/
+
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.is-flex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}

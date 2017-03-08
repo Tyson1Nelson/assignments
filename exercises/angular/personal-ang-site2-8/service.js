@@ -8,6 +8,7 @@ angular.module("MyApp")
     this.getFilms = function () {
         return $http.get("http://swapi.co/api/films")
             .then(function (response) {
+            console.log(response.data);
                 self.films = response.data.results
             })
     }
@@ -20,6 +21,7 @@ angular.module("MyApp")
                 people.push(response.data.name);
             });
         }
+        console.log(people);
         return people;
     }
 
@@ -51,15 +53,10 @@ angular.module("MyApp")
     //            return worlds;
     //        }
 
-    this.world = function (item, species) {
+    this.world = function (item) {
         return $http.get(item).then(function (response) {
-            console.log(response.data.name);
+//            console.log(response.data.name);
             return response.data;
-        }).then(function (response) {
-            return $http.get("" + species).then(function (response) {
-//                console.log(response.data);
-                self.species = response.data;
-            })
         })
     }
 

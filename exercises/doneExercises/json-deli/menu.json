@@ -1,0 +1,91 @@
+{
+    "menu": {
+        "appetizers": [{
+            "fries": {
+                "name": "Crazy Cheese Fries",
+                "ingredients": ["Potatos", "salt", "Cheese", "onions"],
+                "description": "Hot french fries, covered in cheese and onions"
+            },
+            "chips": {
+                "name": "Chips w/Queso dip",
+                "ingredients": ["Corn flower chips", "Cheese", "Beans"],
+                "description": "Cheese chip dip"
+            },
+            "hotPoppers": {
+                "name": "Jalapeno Poppers",
+                "ingredients": ["Jalapeno's", "cream cheese", "bread crumbs"],
+                "description": "Stuffed Jalapenos, deep fried and served HOT"
+            }
+
+    }],
+        "coldSandwiches": [{
+                "club": {
+                    "name": "Club Sandwich",
+                    "ingredients": ["Bread", "Ham", "lettice", "tomatos", "mayo"],
+                    "description": "Bread, stuffed with delicious ham, topped with fresh vegitables and finished off with mayo"
+                },
+                "blt": {
+                    "name": "Bacon Lettice Tomato",
+                    "ingredients": ["Bacon", "Lettice", "Tomato", "bread", "mayo"],
+                    "description": "Simple somewhat healthy sandwich, all that delicious lettice and tomatos almost make it like your eating a salad with bacon"
+                },
+                "coldTurkey": {
+                    "name": "Cold Turkey Sandwich",
+                    "ingredients": ["Bread", "turkey", "lettice", "tomatos", "mayo", "diced onions", "olives"],
+                    "description": "Sandwich made with turkey"
+                }
+    }
+    ],
+        "hotSandwiches": [{
+            "hamburger": {
+                "name": "Big Boy Burger",
+                "ingredients": ["hamburger", "buns", "tomatos", "onions", "pickles", "cheese", "Secret Hamburger Sauce"],
+                "description": "A burger that is definately bigger than your stomach"
+            },
+            "philly": {
+                "name": "Philly Cheese Steak",
+                "ingredients": ["Bread", "steak", "cheese", "cooked onions", "cooked bell peppers"],
+                "description": "Juicy, drippy, cheese and steak filled sandwich, ready to be devoured"
+            },
+            "hamCheese": {
+                "name": "Ham and cheese",
+                "ingredients": ["bread", "ham", "cheese", "butter"],
+                "description": "Grilled Ham and cheese sandwich"
+            }
+    }],
+        "desserts": [{
+            "pie": {
+                "name": "Pumpkin Pie",
+                "ingredients": ["pie crust", "pumpkin", "sugar", "whipped Cream"],
+                "description": "Pumpkin pie slice, covered in whipped cream"
+            },
+            "cake": {
+                "name": "Chocolate Cake",
+                "ingredients": ["Chocolate", "eggs", "flour", "sugar", "milk", "frosting"],
+                "description": "Chocolate Cake, covered with more chocolate, and topped with a strawberry"
+            },
+            "iceCream": {
+                "name": "Rockier Road",
+                "ingredients": ["milk", "sugar", "marshmellows", "Chocolate"],
+                "description": "supper soft chocolate ice cream, with chocolate bar chunks, marshmellows, and little bits of almonds"
+            }
+    }],
+        "drinks": [{
+            "water": {
+                "name": "Spring Water",
+                "ingredients": ["water"],
+                "description": "Spring Water"
+            },
+            "orangeJuice": {
+                "name": "Orange Juice",
+                "ingredients": ["oranges"],
+                "description": "Freshly squeezed oranges, ready to drink."
+            },
+            "soda": {
+                "name": "Dr Pepper",
+                "ingredients": ["sugar", "water", "prunes", "high fructose corn syrup"],
+                "description": "Ice Cold, sweet Dr Pepper"
+            }
+    }]
+    }
+}

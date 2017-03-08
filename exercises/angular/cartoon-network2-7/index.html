@@ -26,11 +26,13 @@
         </div>
     </header>
     <section>
-        <div class="row center-block">
-            <div class="col col-sm-12 text-center" ng-repeat="image in imgInfo track by $index">
-                <h4>{{ image.title }}</h4>
-                <p>{{ image.description }}</p>
-                <img ng-src="{{image.imgUrl}}" alt="" class="img-responsive" height="">
+        <div class="row is-flex center-block">
+            <div class="col col-xs-12 col-sm-4 text-center" ng-repeat="image in imgInfo track by $index">
+                <div id="output">
+                    <h4>{{ image.title }}</h4>
+                    <p>{{ image.description }}</p>
+                    <img ng-src="{{image.imgUrl}}" alt="" class="img-responsive" height="">
+                </div>
             </div>
         </div>
     </section>

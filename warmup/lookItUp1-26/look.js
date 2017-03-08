@@ -1,52 +1,72 @@
 var readline = require("readline-sync");
 
-var dictionary = {};
+var dictionary = [];
 
-function newWords(word, definition) {
-    var dictionary = {
+function newWords(object, definition) {
+    var newDictionary = {
         name: object,
         definition: definition,
     };
     // dictionary.word = definition;  // doesn't work because it thinks I want "word" to be the property name instead of the actual word I'm trying to add
-    dictionary[word] = definition;
-    //console.log(dictionary);
-}
+    isDuplicate(newDictionary)
+};
 
-function isDuplicate(word) {
-    var isStored = word;
-    if (word != isStored) {
-        newWords(word, definition);
+function isDuplicate(obj) {
+    for (dict of dictionary) {
+        if (dict.name === obj.name) {
+            console.log("ERR----You already have '" + obj.name + "' in your Dictionary");
+            console.log("\n----------------\n" + "name: " + dict.name);
+            console.log("description: " + dict.definition + "\n----------------\n");
+            makeSelection();
+        };
+    };
+    dictionary.push(obj);
+    console.log(dictionary);
+    makeSelection();
+};
+
+var options = ["Enter word", "Look through dictionary"];
+
+function makeSelection() {
+    var selection = readline.keyInSelect(options, "what would you like to do?? \n");
+    if (selection === 0) {
+        ask();
+    }
+    if (selection === 1) {
+        check();
+    };
+};
+
+function ask() {
+    var dictionaryWord = readline.question("what word would you like to put into the dictionary? \n")
+    var definition = readline.question("what is the definition of that word? \n");
+    newWords(dictionaryWord, definition);
+};
+
+function check() {
+    if (dictionary.length > 0) {
+        console.log("\n" + "You entered 'Look through dictionary'");
+        look()
+    } else {
+        console.log("Nothing In Dictionary \n");
+        makeSelection();
+    };
+};
+
+function look() {
+    var look = readline.keyInYN("would you like to look through you dictionary? " + "\n");
+    if (look === true) {
+        for (var i = 0; i < dictionary.length; i++) {
+            console.log("\n" + "name: " + dictionary[i].name);
+            console.log("definition: " + dictionary[i].definition + "\n---------------------");
+        }
+        makeSelection();
+    } else {
+        console.log("\n" + "Ok, maybe later...");
+        makeSelection();
     }
 }
-var whatToDo = ["enter word", "look through dictionary"];
-
-readline.keyInSelect(whatToDo, "what would you like to do??")
-if (whatToDo[1] === true) {
-    console.log("library")
-}
-
-var dictionaryWord = readline.question("what word would you like to put into the dictionary?")
-
-var definition = readline.question("what is the definition of that word? ");
-newWords(dictionaryWord, definition);
-
-var askAgain = readline.keyInYN("would you like to enter some more? ")
-if (askAgain === true) {
-    var anotherWord = readline.question("what word? ");
-    var anotherDef = readline.question("define word: ");
-    newWords(anotherWord, anotherDef);
-} else {
-    console.log("continue");
-}
-
-var look = readline.keyInYN("would you like to look through you dictionary?")
-
-if (look === true) {
-    console.log(dictionary);
-} else {
-    console.log("maybe later");
-}
-
+makeSelection();
 
 
 ////////////////////////////////////////////////

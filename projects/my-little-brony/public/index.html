@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Little Pony</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=The+Girl+Next+Door" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="#!/home">
+            <button type="button" class="btn btn-primary">Home</button>
+        </a>
+        <a href="#!/ponies">
+            <button type="button" class="btn btn-primary">Ponies</button>
+        </a>
+    </nav>
+
+
+    
+    <div ng-view>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="home/home.js"></script>
+    <script src="ponies/ponies.js"></script>
+    <script src="ponyService.js"></script>
+</body>
+
+</html>

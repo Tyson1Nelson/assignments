@@ -1,8 +1,6 @@
 var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
+var fruitRoute = express.Router();
 
-app.use(bodyParser.json());
 
 var fruit = [{
     type: "apple",
@@ -18,8 +16,8 @@ var fruit = [{
     price: 0.75
 }];
 
-
-app.get("/fruit", function (req, res) {
+fruitRoute.route("/")
+    .get(function (req, res) {
     var filteredFruit = []
     console.log("hello there");
     console.log(Object.keys(req.query));
@@ -38,10 +36,4 @@ app.get("/fruit", function (req, res) {
     }
 
 });
-
-
-
-
-app.listen(8000, function () {
-    console.log("app is listening on port 8000")
-});
+module.exports = fruitRoute;

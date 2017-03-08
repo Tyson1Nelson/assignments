@@ -1,0 +1,54 @@
+<div id="PoniesPage"></div>
+<h1>Ponies page</h1>
+<div id="ponyRow" class="container">
+    <!--
+    <div class="col col-sm-4 container" ng-repeat="pony in ponies track by $index">
+        <div>
+            <h2 class="text-center">
+        {{ pony.name }}
+        </h2>
+            <div ng-show="editPony">
+                <form>
+                    <h3>
+                    <label for="ponyName">Edit Name:</label>
+                    <input id="" type="text" class="form-control" name="ponyName" ng-model="pony.name">
+                </h3>
+                    <label>Edit ImgUrl:</label>
+                    <input id="input" class="form-control" type="text" ng-model="pony.imgUrl">
+                </form>
+            </div>
+            <p>Posted by: {{ pony.username }}</p>
+            <img ng-hide="editPony" class="img img-responsive" ng-src="{{ pony.imgUrl }}" alt="ponies">
+            <button id="edit" type="button" class="btn btn-success" ng-click="update(pony, $index)" ng-show="editPony"><span class="glyphicon glyphicon-check"></span>Submit</button>
+            <button class="btn btn-warning glyphicon glyphicon-pencil" ng-click="editPony = !editPony"></button>
+            <button type="button" class="btn btn-danger glyphicon glyphicon-trash" ng-click="delete(pony, $index)"></button>
+
+        </div>
+    </div>
+-->
+    <div id="ponyContainer" ng-repeat="pony in ponies track by $index">
+
+        <div id="infoList">
+            <h2 class="text-center">
+        {{ pony.name }}
+        </h2>
+            <form ng-submit="update(pony, $index)">
+                <div ng-show="editPony" ng-hide="hideEdit">
+
+                    <h3>
+                    <label for="ponyName">Edit Name:</label>
+                    <input id="" type="text" class="form-control" name="ponyName" ng-model="pony.name">
+                </h3>
+                    <label>Edit ImgUrl:</label>
+                    <input id="input" class="form-control" type="text" ng-model="pony.imgUrl">
+
+                </div>
+                <p>Posted by: {{ pony.username }}</p>
+                <img ng-hide="editPony" class="img img-responsive img-rounded" ng-src="{{ pony.imgUrl }}" alt="ponies">
+                <button id="edit" type="submit" class="btn btn-success"  ng-show="editPony" ng-click="editPony = !editPony"><span class="glyphicon glyphicon-check"></span>Submit</button>
+                <button class="btn btn-warning glyphicon glyphicon-pencil" ng-click="editPony = !editPony"></button>
+                <button type="button" class="btn btn-danger glyphicon glyphicon-trash" ng-click="delete(pony, $index)"></button>
+            </form>
+        </div>
+    </div>
+</div>

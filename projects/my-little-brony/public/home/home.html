@@ -1,0 +1,32 @@
+<div id="homePg">
+    <h1>Home Page</h1>
+    <!--        <h3>{{ name }}</h3>-->
+
+    <div class="row container text-center">
+        <div class="col col-xs-12 text-center">
+            <h1>Add Ponies!</h1>
+        </div>
+        <div class="col col-xs-12 center-block">
+            <form id="submitPony">
+                <div class="col col-xs-8 col-sm-12 text-center">
+                    <div class="col col-xs-12 col-sm-4">
+                        <input name="title" class="form-control" type="text" placeholder="Pony Name" ng-model="pony.name" ng-minlength="3">
+                    </div>
+                    <div class="col col-xs-12 col-sm-4">
+                        <input name="description" class="form-control" type="text" placeholder="Image Url" ng-model="pony.imgUrl">
+                    </div>
+                    <div class="col col-xs-12 col-sm-4">
+                        <input id="price-input" name="title" class="form-control" type="text" placeholder="User Name" ng-model="pony.username">
+                    </div>
+
+
+                    <div class="col col-xs-12 text-center">
+                        <button class="btn btn-success" type="button" ng-click="addPony(pony)" ng-disabled="!pony.name || !pony.imgUrl || !pony.username">submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
