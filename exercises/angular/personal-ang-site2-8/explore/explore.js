@@ -15,6 +15,7 @@ angular.module("MyApp")
 
 
     $scope.people = function (film, index) {
+        console.log(film);
         film.people = starWarsService.getEpisodeCharacters(film);
         console.log(index);
         $scope.playSound();

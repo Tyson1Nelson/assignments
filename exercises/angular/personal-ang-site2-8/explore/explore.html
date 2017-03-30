@@ -1,6 +1,6 @@
 <div id="explorePg">
     <h1>Explore</h1>
-    <div class="row">
+    <div class="row is-flex">
         <div class="col col-xs-12">
 
             <div class="row" ng-repeat="crawl in films | orderBy: 'episode_id' track by $index">
@@ -8,14 +8,14 @@
                     <button class="btn btn-primary" ng-click="showEpisodeInfo = !showEpisodeInfo">Episode {{crawl.episode_id}}</button>
                 </div>
                 <div id="epiInfo" class="col col-sm-6" ng-show="showEpisodeInfo">
-                    <h2> {{ crawl.title | uppercase }} </h2>
-                    <p> {{ crawl.opening_crawl | uppercase }} </p>
-                    <h4>Date of release: {{ crawl.release_date }} </h4>
+                    <h2 ng-class="{boxShadow: showEpisodeInfo === true}"> {{ crawl.title | uppercase }} </h2>
+                    <p ng-class="{boxShadow: showEpisodeInfo === true}"> {{ crawl.opening_crawl | uppercase }} </p>
+                    <h4 ng-class="{boxShadow: showEpisodeInfo === true}">Date of release: {{ crawl.release_date }} </h4>
                     <br>
-                    <h3 class="text-center" ng-click="people(crawl, $index)">"Click Here" for Characters in film</h3>
+                    <h3 ng-class="{boxShadow: showEpisodeInfo === true}" class="text-center" ng-click="people(crawl, $index)">"Click Here" for Characters in film</h3>
                 </div>
 
-                <div ng-show="showEpisodeInfo">
+                <div ng-if="crawl.people !== undefined">
 
                     <div id="characters" class="col col-xs-12 col-sm-6">
                         <div class="col col-xs-3 col-sm-4" ng-repeat="characters in crawl.people track by $index">

@@ -38,7 +38,7 @@
         </div>
     </div>
     <div class="row is-flex container">
-        <div id="output" class="col-sm-4" ng-model="bounty" ng-repeat="person in hunted track by $index">
+        <div id="output" class="col-xs-12 col-sm-4" ng-model="bounty" ng-repeat="person in hunted track by $index">
             <div id="bountyOutput">
                 <h3 ng-hide="editBounty">Name:<br>{{ person.firstName }} {{ person.lastName }}</h3>
                 <h4 ng-hide="editBounty">Bounty: {{ person.bountyAmount }} </h4>

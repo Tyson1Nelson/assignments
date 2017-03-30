@@ -1,223 +1,36 @@
-<h1>Projects Page</h1>
-<div class="row container-fluid">
-    <div class="col col-sm-12">
-        <div class="well">
-            <h3>Mario Pest Control</h3>
-            <p>One page mario website that keeps track of how much money Mario makes when he takes care of certain pests, each pest is worth a certain amount. (Pages: html, js, css) </p>
-            <img data-toggle="modal" data-target="#infoModal" src="" class="img-responsive img-thumbnail" alt="">
+<div id="projectPg">
+    <h1>Projects</h1>
+    <h4>Click on an image to view</h4>
+    <div class="row is-flex">
 
-            <div class="container">
-                <h2>Modal Example</h2>
-                <div class="modal fade" id="infoModal" role="dialog">
-                    <div class="modal-dialog">
+        <div ng-if="project.name.length > 0" class="col-xs-12 col-md-6 container project" ng-repeat="project in projects | orderBy: '-rating' track by $index" ng-click="check(project)">
+            <div>
+                <h3 class="text-center"><u>{{project.name}}</u></h3>
+                <p>{{ project.description }}</p>
 
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <img class="img img-responsive" src="" alt="">
-                            </div>
-                        </div>
+                <div>
+                    <div ng-if="project.images.length === 1" class="col-xs-4"></div>
+                    <div class="col-xs-4" ng-repeat="img in project.images track by $index">
+                        <img class="img img-responsive" ng-click="viewImg(img, $index)" ng-model="img" ng-src="{{ img }}" alt="project images" max-width="200">
                     </div>
                 </div>
+                <p ng-if="project.github">View on <a href="{{project.github}}">Github</a></p>
             </div>
         </div>
-    </div>
-    <div class="col col-sm-12">
-        <div class="well">
-            <h3>Bussiness Time</h3>
-            <p>Simple websit for a "bussiness" that has 3 html and css pages. </p>
-            <img data-toggle="modal" data-target="#infoModal" src="/projects/images/Screen%20Shot%202017-03-10%20at%2010.08.46%20AM.png" class="img-responsive img-thumbnail" alt="" width="200px" height="200px">
-            <img data-toggle="modal" data-target="#infoModal" src="/projects/images/Screen%20Shot%202017-03-10%20at%2010.11.45%20AM.png" class="img-responsive img-thumbnail" alt="" width="200px" height="200px">
-            <div class="container">
-                <div class="modal fade" id="infoModal" role="dialog">
-                    <div class="modal-dialog">
 
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <img class="img img-responsive" src="" alt="">
-                            </div>
-                        </div>
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="img img-responsive" ng-src="{{ image }}" alt="">
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="col col-sm-12">
-        <div class="well">
-            <h3>Colossal Adventure</h3>
-            <p>Console based RPG game, that askes the user to interact with it until the player dies. operated by readline-sync </p>
-            <img data-toggle="modal" data-target="#infoModal" ng-src="{{ project.image }}" class="img-responsive img-thumbnail" alt="">
 
-            <div class="container">
-                <h2>Modal Example</h2>
-                <div class="modal fade" id="infoModal" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <img class="img img-responsive" ng-src="{{project.image}}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col col-sm-12">
-        <div class="well">
-            <h3>High-Score Haven</h3>
-            <p>A website designed for gamers to submit and share thier high scores. </p>
-            <img data-toggle="modal" data-target="#infoModal" ng-src="{{ project.image }}" class="img-responsive img-thumbnail" alt="">
-
-            <div class="container">
-                <h2>Modal Example</h2>
-                <div class="modal fade" id="infoModal" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <img class="img img-responsive" ng-src="{{project.image}}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-<!-----    ----->
-    
-    <div class="col col-sm-12">
-        <div class="well">
-            <h3>Panguins VS Communists</h3>
-            <p>A terminal/console based game that runs through a series of functions to randomly determine which party (panguin or communist) will survive. The object was to have one party nuke the other and the winner was based on the population of the enemy</p>
-            <img data-toggle="modal" data-target="#infoModal" ng-src="{{ project.image }}" class="img-responsive img-thumbnail" alt="">
-
-            <div class="container">
-                <div class="modal fade" id="infoModal" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <img class="img img-responsive" ng-src="{{project.image}}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col col-sm-12">
-        <div class="well">
-            <h3>Mom's Shopping List</h3>
-            <p>A website used for adding items to a list, and having the ability to remove individual items from that list</p>
-            <img data-toggle="modal" data-target="#infoModal" ng-src="{{ project.image }}" class="img-responsive img-thumbnail" alt="">
-
-            <div class="container">
-                <div class="modal fade" id="infoModal" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <img class="img img-responsive" ng-src="{{project.image}}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col col-sm-12">
-        <div class="well">
-            <h3></h3>
-            <p></p>
-            <img data-toggle="modal" data-target="#infoModal" ng-src="{{ project.image }}" class="img-responsive img-thumbnail" alt="">
-
-            <div class="container">
-                <div class="modal fade" id="infoModal" role="dialog">
-                    <div class="modal-dialog">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <img class="img img-responsive" ng-src="{{project.image}}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col col-sm-12">
-        <div class="well">
-            <h3></h3>
-            <p></p>
-            <img data-toggle="modal" data-target="#infoModal" ng-src="{{ project.image }}" class="img-responsive img-thumbnail" alt="">
-
-            <div class="container">
-                <div class="modal fade" id="infoModal" role="dialog">
-                    <div class="modal-dialog">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <img class="img img-responsive" ng-src="{{project.image}}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col col-sm-12">
-        <div class="well">
-            <h3></h3>
-            <p></p>
-            <img data-toggle="modal" data-target="#infoModal" ng-src="{{ project.image }}" class="img-responsive img-thumbnail" alt="">
-
-            <div class="container">
-                <div class="modal fade" id="infoModal" role="dialog">
-                    <div class="modal-dialog">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <img class="img img-responsive" ng-src="{{project.image}}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

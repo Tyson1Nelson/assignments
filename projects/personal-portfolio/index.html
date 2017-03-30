@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Tyson's Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
 
 </head>
 
@@ -15,23 +16,26 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <ul class="nav nav-pills">
-                <li role="presentation" class="active"><a href="#!/home">Home</a></li>
+                <li class="active" role="presentation"><a href="#!/home">Home</a></li>
                 <li role="presentation"><a href="#!/about">About</a></li>
                 <li role="presentation"><a href="#!/projects">Projects</a></li>
             </ul>
         </div>
     </nav>
-    
+
     <div id="view" ng-view>
     </div>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
     <script src="app.js"></script>
     <script src="/home/home.js"></script>
     <script src="/about/about.js"></script>
     <script src="/projects/project.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+
 </body>
 
 </html>

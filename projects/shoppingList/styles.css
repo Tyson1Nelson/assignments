@@ -1,12 +1,16 @@
 
 #myForm {
-    background-color: aqua;
+    background-color: gainsboro;
     border: 1px ridge black;
     padding: 30px;
-/*    width: 50%;*/
     text-align: left;
-    min-height: 100px;
     max-width: 400px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+h1 {
+    font-size: 50px;
 }
 body {
 /*    border: 5px ridge blue;*/
@@ -19,14 +23,31 @@ body {
 }
 #output {
     column-count: 2;
-    column-rule: ;
     display:inherit;
+    font-size: 30px;
+    font-weight: 600;
+    max-width: 600px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#add {
+    background-color: skyblue;
+    border-color: skyblue;
+    min-width: 50px;
+    min-height: 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+#input {
+    border-radius: 5px;
+    height: 25px;
+    width: 300px;
+    font-size: 20px;
+    
 }
 @media (max-width: 420px){
     #myForm {
         column-count: none;
-        background-color: aquamarine;
-        
-
     }
 }

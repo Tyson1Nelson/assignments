@@ -16,8 +16,9 @@ angular.module("MyApp", [])
 
     $scope.getComments = function (input, index) {
         console.log(input.comments.length);
-        console.log();
-        $scope.modalComments = input.comments
+        console.log(input);
+        $scope.modal = input;
+        $scope.modalComments = input.comments;
     };
     $scope.addComment = function (input, index) {
         input.comments.push(input.newComment);

@@ -1,11 +1,31 @@
 angular.module("MyApp")
-
-.directive("projectInfo", [function () {
-    return {
-        templateUrl: "directive/profileInfo.html",
-        scope: {
-            project: "="
+    .component('modalComponent', {
+        templateUrl: 'profileInfo.html',
+        bindings: {
+            resolve: '<',
+            close: '&',
+            dismiss: '&'
         },
-        restrict: "E",
-    }
-}]);
+        controller: function () {
+            var $ctrl = this;
+
+            $ctrl.$onInit = function () {
+                $ctrl.items = $ctrl.resolve.items;
+                $ctrl.selected = {
+                    item: $ctrl.items[0]
+                };
+            };
+
+            $ctrl.ok = function () {
+                $ctrl.close({
+                    $value: $ctrl.selected.item
+                });
+            };
+
+            $ctrl.cancel = function () {
+                $ctrl.dismiss({
+                    $value: 'cancel'
+                });
+            };
+        }
+    });
